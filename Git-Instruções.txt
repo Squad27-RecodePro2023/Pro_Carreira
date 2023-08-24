@@ -1,0 +1,105 @@
+Sobre este projeto e seu repósitório:
+
+Neste projeto está sendo adotado o trabalho por meio de 
+branchs individuais. Como isso funciona?
+
+Cada colaborador possui sua uma branch no projeto com seu nome.
+Todos os comandos de commit e push devem sem realizados para o seu ambiente próprio.
+Ao finalizar seus commits, verifique se está no seu espaço correto, 
+e então realize o push. Lembre-se, na hora de enviar as alterações para origin o comando é:
+
+ex.: git push origin <nome da sua branch>
+
+Além das branchs individuais existem outras duas branchs, "main" e "developer", 
+por segurança essas branchs estão protegidas, quando o seu trabalho estiver 
+terminado e puder ser enviado para ser adicionado ao projeto você deve realizar um pull request.
+
+O PULL REQUEST DEVE SER FEITO DA SUA BRANCH PARA A BRANCH "DEVELOPER".	
+
+Outra informação importante que deve ser observada.
+
+Para certificar que seu trabalho está em conformidade 
+com o projeto atual você deve observar alguns passos.
+
+Início do dia de trabalho
+# executar o seguinte comando:
+# git pull origin <nome da sua área>
+
+Durante o trabalho
+# Sempre que tiver concluído um funcionalidade ou parte que seja 
+considerada como indepndente realize um commit.
+
+Ao final do dia
+# Ao final do dia realize o envio suas atualizações para o repositório do github.
+# Os comandos que devem ser usados nesse processo são:
+# git commit -m "Mensagem de commit" 
+# git push origin <nome da sua branch>
+lembre-se em que ordem os comandos devem ser executados
+
+Após isso será possível realizar um pull request para a branch "developer"
+isso pode ser feito diretamente no github
+
+QUALQUER DÚVIDA NESTE PROCESSO NÃO HESITE EM PERGUNTAR AO RESPONSÁVEL PELO PROJETO
+
+IMPORTANTE
+ 
+
+# # # # # # Intruções sobre a realização de commits # # # # # #
+
+
+git commit -m "[feat] Adiciona página de login"
+
+- Escreva mensagens de commit claras e descritivas que resumam as mudanças que você fez.
+
+Ex:
+[feat] Adiciona botão de login ao header
+
+Adiciona um novo botão de login no header da página, permitindo que 
+os usuários acessem a área de login mais facilmente.
+
+Foram adicionados os seguintes arquivos:
+- biblia.dart
+- biblia_repository.dart
+
+Foram modificados os seguintes arquivos:
+- warapper.dart
+
+Foram removidos os seguintes arquivos:
+- test.dart
+
+Essa funcionalidade é importante para melhorar a usabilidade 
+do site e permitir que os usuários acessem facilmente a área de login.
+
+
+Se necessário, inclua uma descrição mais detalhada do commit no corpo da mensagem, 
+usando uma quebra de linha após o título.
+Use a tag "[feat]" para commits que adicionam novos recursos, "[fix]" para correções de bugs, 
+"[refactor]" para refatorações de código e "[doc]" para atualizações de documentação.
+
+Ex: 
+
+## Como realizar um commit
+
+Para manter a organização do projeto, é importante seguir algumas regras ao realizar um commit. 
+Cada commit deve ter uma mensagem clara e concisa, descrevendo o que foi alterado. 
+Além disso, é recomendado utilizar as seguintes tags para identificar o tipo de alteração:
+
+- [feat]: Adiciona uma nova funcionalidade; 
+ex: git commit -m "[feat] Adiciona funcionalidade de busca"
+
+- [fix]: Corrige um bug;
+EX: git commit -m "[fix] Corrige bug na funcionalidade de busca"
+
+- [style]: Faz alterações relacionadas ao estilo do código;
+EX: git commit -m "[feat] Adiciona nova funcionalidade de login"
+
+- [refactor]: Refatora o código, sem alterar sua funcionalidade;
+ex: git commit -m "[refactor]: Adiciona funcionalidade de pesquisa de usuários"
+
+- [doc]: Atualiza a documentação.
+ex: git commit -m "[doc]: Atualiza a documentação."
+
+IMPORANTE!!!!!!!!!
+Lembre-se de sempre criar um commit para cada alteração que fizer e de 
+realizar um push após finalizar suas alterações locais.
+
