@@ -5,19 +5,50 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <link rel="stylesheet" href="style.css">
   <title>Pro Carreira</title>
 </head>
 
 <body>
   <header>
+    <nav class="navbar navbar-expand-md">
+      <div class="container-fluid d-flex justify-content-between">
+        <a href="index.html" class="navbar-brand d-flex align-items-center logo">
+          <img class="logotipo" src="imagens/pro_carreira.png" alt="Logotipo">
+          Pro Carreira | <span class="span-logo"> escola virtual</span>
+        </a>
+        <button class="navbar-toggler mx-sm-3" type="button" data-bs-toggle="collapse" data-bs-target="#hamburguer">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
+        <div class="container-fluid">
+          <div class="collapse navbar-collapse" id="hamburguer">
+            <div class="container navbar-nav ms-auto d-flex justify-content-end">
+              <a href="index.html" class="nav-link me-md-1 me-lg-5 active">Início</a>
+              <a href="#" class="nav-link me-md-1 me-lg-5">Cursos</a>
+              <a href="#" class="nav-link me-md-1 me-lg-5">Ajuda</a>
+              <hr class="group-divider">
+                <div class="btn-group">
+                  <div class="btn-menu-entrar" onclick='window.open("index.html", "_self");'>
+                    <i class="bi bi-person-fill fs-3"></i>
+                  </div>
+                  <div class="btn-menu-cad" onclick='window.open("index.html", "_self");'>Cadastrar</div>
+                </div>
+            </div> <!-- div-navbar -->
+          </div>
+        </div>
+      </div>
+
+    </nav><!-- O menu de navegação acaba aqui -->
+    
   </header>
-  <main>
 
+  <main class="ocupacao">
   </main>
-  <footer>
 
+  <footer>
+    <p>teste</p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
