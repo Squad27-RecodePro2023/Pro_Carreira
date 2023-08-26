@@ -130,12 +130,17 @@ hr{
 
 /* ##### Main Style ##### */
 
+
+/* --------------->CSS da Equipe AQUI<-------------------- */
+
+
+
 /* ##### Main Style ##### */
 
 /* ##### Footer Style ##### */
 .bg-footer{
   background-color: var(--cor5);
-}
+}/*Agatha*/
 .rodape{
   color:var(--cor1)
 }
