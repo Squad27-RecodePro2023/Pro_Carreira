@@ -143,11 +143,8 @@ hr {
 
 
 /* --------------->CSS da Equipe AQUI<-------------------- */
-.card {
-
+.form-container {
   background-color: var(--cor1);
-  padding: 20px 100px;
-  margin: 0 auto
 }
 
 .bg-form {
