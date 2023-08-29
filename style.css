@@ -2,12 +2,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
 
-*{
+
+* {
   margin: 0;
   padding: 0;
 }
 
-:root{
+:root {
   --cor1: #c6e4e3;
   --cor2: #58bebe;
   --cor3: #31af7d;
@@ -17,67 +18,96 @@
   --font-primaria: 'Titillium Web', cursive, sans-serif;
 }
 
-body{
+body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
-.ocupacao{
-  flex:1;
+
+.font-pro-carreira {
+  font-family: var(--font-primaria);
+  font-weight: bold;
+}
+
+.ocupacao {
+  flex: 1;
   background-color: var(--cor3);
 }
 
 /* ##### Header Style ##### */
-.logotipo{
+.logotipo {
   width: 70px;
   margin-right: 10px;
 }
 
-.logo{
+.logo {
   font-family: var(--font-primaria);
-  font-weight: bolder ;
+  font-weight: bolder;
   font-size: 30px;
   color: var(--cor1);
 }
 
-.logo:hover{
+.logo:hover {
   color: var(--cor1);
 }
 
-.span-logo{
+.span-logo {
   font-family: var(--font-primaria);
   font-weight: lighter;
   font-size: 15px;
-  margin-left: 5px;
+  margin-left: 2px;
   color: var(--cor1);
 }
 
-nav{
+nav {
   background-image: linear-gradient(to bottom, var(--cor5), #03363dbb);
 }
 
-.nav-link{
-  font-size: 18px;
-  color: white !important;
+.menu-transparente {
+  background-image: linear-gradient(to bottom, transparent, transparent);
+  z-index: 1;
 }
 
-.active{
-  color:var(--cor2) !important;
+/* Este código sobrescreve as caracteristicas do navbar do projeto para a página index */
+.menu-transparente .nav-link {
+  background-color: rgba(255, 255, 255, 0.452);
+  border-radius: 30px;
+  padding: 5px 20px !important;
+  margin: 2px;
+}
+
+.menu-transparente .active {
+  color: var(--cor5) !important;
+}
+
+.nav-link {
+  font-size: 18px;
+  color: white !important;
+  text-shadow: 1px 1px 1px #00000050;
+}
+
+.active {
+  color: var(--cor2) !important;
   font-weight: bolder;
 }
 
-.navbar-toggler, .navbar-toggler-icon{
+.navbar-toggler,
+.navbar-toggler-icon {
   background-color: var(--cor1) !important;
 }
-.navbar-toggler:focus, .navbar-toggler-icon:focus{
+
+.navbar-toggler:focus,
+.navbar-toggler-icon:focus {
   background-color: var(--cor1) !important;
   color: var(--cor1) !important;
 }
-.btn-group{
+
+.btn-group {
   display: inline-flex;
   align-items: center;
 }
-.btn-menu-entrar{
+
+.btn-menu-entrar {
   display: inline-flex;
   align-items: center;
   font-family: var(--font-primaria);
@@ -90,19 +120,20 @@ nav{
   padding: 5px 10px 5px 10px;
   margin-right: 10px;
   height: 35px;
-  cursor:pointer;
+  cursor: pointer;
 }
 
-.btn-menu-entrar::before{
+.btn-menu-entrar::before {
   content: 'Entrar';
 }
-.btn-menu-entrar:hover{
+
+.btn-menu-entrar:hover {
   border: 2px solid var(--cor2);
-  color:var(--cor2);
+  color: var(--cor2);
   transition: 0.5s;
 }
 
-.btn-menu-cad{
+.btn-menu-cad {
   display: inline-flex;
   align-items: center;
   font-family: var(--font-primaria);
@@ -116,57 +147,78 @@ nav{
   height: 35px;
   cursor: pointer;
 }
-.btn-menu-cad:hover{
+
+.btn-menu-cad:hover {
   background-color: var(--cor2);
   transition: 0.5s;
 }
-.navbar-expand-md{
+
+.navbar-expand-md {
   padding-bottom: 15px;
 }
-hr{
+
+hr {
   color: var(--cor1);
 }
+
 /* ##### Header Style ##### */
 
 /* ##### Main Style ##### */
+.banner-pro {
+  height: 60vh;
+  background-image: url("imagens/mesa_escritorio_diagonal_1972_1024.png");
+  background-color: var(--cor3);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0;
+  overflow: hidden;
+}
 
+.banner-pro-girl {
+  height: 100%;
+  width: 100%;
+  margin-left: 5%;
+  background-image: url("imagens/mulher_computador_1303_1303.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right 60% bottom 0%;
+}
+
+.btn-cad {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-primaria);
+  font-size: 20px;
+  font-weight: bolder;
+  background-color: var(--cor5);
+  border: 1px solid var(--cor1);
+  color: white;
+  border-radius: 30px;
+  padding: 5px 20px 5px 20px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.btn-cad:hover {
+  background-color: var(--cor2);
+  color: var(--cor5);
+  transition: 0.5s;
+}
 
 /* --------------->CSS da Equipe AQUI<-------------------- */
-.card{
-  
-  background-color: var(--cor1);
-  padding: 20px 100px ;
-  margin: 0 auto
-           
-}
-.bg-form{
-  background-color: var(--cor1);
-  border: 1px solid var(--cor5);
-
-}
-
-.meu-botao {
-  background-color: var(--cor5);
-  border: none;
-  color: var(--cor1);
-  padding: 5px 30px;
-  border-radius: 5px;
-}
-.meu-botao:hover{
-  background-image: linear-gradient(to bottom,var(--cor5),var(--cor4));
-}
-
-
 
 /* ##### Main Style ##### */
 
 /* ##### Footer Style ##### */
-.bg-footer{
+.bg-footer {
   background-color: var(--cor5);
-}/*Agatha*/
-.rodape{
-  color:var(--cor1)
 }
+
+.rodape {
+  color: var(--cor1)
+}
+
 .gp-footer {
   display: flex;
   align-items: center;
@@ -191,14 +243,14 @@ hr{
   margin-bottom: 20px;
 }
 
-.pro-carreira{
+.pro-carreira {
   font-family: var(--font-primaria);
   font-size: 22px;
   font-weight: bold;
   color: var(--cor5);
 }
 
-.fot-end{
+.fot-end {
   background-color: var(--cor1);
   color: var(--cor5);
   display: flex;
@@ -206,4 +258,55 @@ hr{
   align-items: center;
   font-weight: bold;
 }
+
 /* ##### Footer Style ##### */
+
+
+/* ### Breakpoints de responsividade banner inicial ### */
+@media(max-width:900px) {
+  .banner-pro {
+    background-image: url("imagens/mesa_escritorio_recorte.jpg");
+  }
+
+  .banner-pro-girl {
+    height: 100%;
+    width: 100%;
+    /* margin-top: 20%; */
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+  }
+}
+
+@media(max-width:600px) {
+
+  .banner-pro-girl {
+    height: 100%;
+    width: 100%;
+    margin-top: auto;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center bottom;
+  }
+}
+
+@media(max-width:375px) {
+  .logotipo {
+    width: 50px;
+    margin-right: 5px;
+  }
+
+  .span-logo {
+    margin-left: 0px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+}
+
+@media(max-width:350px) {
+  .invisivel {
+    display: none;
+  }
+}
