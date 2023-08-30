@@ -255,8 +255,6 @@ hr {
   font-size: 20px;
 }
 
-
-
 .area-interesse {
   display: flex;
   flex-wrap: wrap;
@@ -304,23 +302,6 @@ hr {
   font-weight: bolder;
   background-color: var(--cor3);
 }
-
-
-
-
-.icon-button {
-  margin-right: 5px;
-  font-size: 18px;
-}
-
-.icon-interesse {
-  display: flex;
-  font-size: 18px;
-  width: 22px;
-  height: 22px;
-  margin-right: 5px;
-}
-
 
 
 /*------------------TÍTULO CARD CURSOS -------------*/
@@ -374,13 +355,10 @@ hr {
 }
 
 
-
-
-
-
 /*---------CARDS CURSOS----------*/
 .card {
   margin: 15px;
+  cursor:pointer;
 }
 
 .card-body {
@@ -395,7 +373,7 @@ hr {
 }
 
 .card-conteudo {
-  padding-top: 23px;
+  padding-top: 30px;
 }
 
 .card-title {
@@ -408,9 +386,7 @@ hr {
 
 .card-text {
   font-family: var(--font-primaria);
-  margin-bottom: 10px;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  margin-bottom: 15px;
 }
 
 .card-description {
@@ -427,7 +403,7 @@ hr {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .card-detalhes-nivel-conteudo {
@@ -457,11 +433,6 @@ hr {
   font-size: 30px;
 }
 
-
-
-.final {
-  height: 40px;
-}
 
 
 
