@@ -493,3 +493,16 @@ hr {
 }
 
 /* ##### Footer Style ##### */
+
+@media(max-width:425px) {
+  .logotipo {
+    width: 50px;
+    margin-right: 5px;
+  }
+  .logo {
+    font-size: 25px;
+  }
+  .span-logo {
+    font-size: 12px;
+  }
+}
