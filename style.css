@@ -527,6 +527,13 @@ hr {
     width: 50px;
     margin-right: 5px;
   }
+  .logo {
+    font-size: 25px;
+  }
+  .span-logo {
+    font-size: 12px;
+  }
+
 
   .invisivel {
     display: none;
