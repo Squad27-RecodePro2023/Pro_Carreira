@@ -2,6 +2,29 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
 
+::-webkit-scrollbar {
+  width: .5em;
+  height: .5em;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cor3);
+}
+
+.card-scroller::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--cor5);
+  border-radius: 100vw;
+}
+
+.card-scroller::-webkit-scrollbar-thumb {
+  background: var(--cor5);
+  border-radius: 100vw;
+}
 
 * {
   margin: 0;
@@ -14,8 +37,53 @@
   --cor3: #31af7d;
   --cor4: #439342;
   --cor5: #03363d;
+  --_spacer: 1rem;
 
   --font-primaria: 'Titillium Web', cursive, sans-serif;
+}
+
+.font-cor1 {
+  color: var(--cor1);
+}
+
+.font-cor2 {
+  color: var(--cor2);
+}
+
+.font-cor3 {
+  color: var(--cor3);
+}
+
+.font-cor4 {
+  color: var(--cor4);
+}
+
+.font-cor5 {
+  color: var(--cor5);
+}
+.bg-cor1{
+  background-color: var(--cor1);
+}
+.bg-cor2{
+  background-color: var(--cor2);
+}
+.bg-cor3{
+  background-color: var(--cor3);
+}
+.bg-cor4{
+  background-color: var(--cor4);
+}
+.bg-cor5{
+  background-color: var(--cor5);
+}
+.f-size-p{
+  font-size: 13px;
+}
+.f-size-m {
+  font-size: 15px;
+}
+.f-size-n {
+  font-size: 20px;
 }
 
 body {
@@ -29,9 +97,13 @@ body {
   font-weight: bold;
 }
 
+.font-pro-carreira-normal {
+  font-family: var(--font-primaria);
+  font-weight: normal;
+}
+
 .ocupacao {
   flex: 1;
-  background-color: var(--cor3);
 }
 
 /* ##### Header Style ##### */
@@ -165,24 +237,24 @@ hr {
 
 /* ##### Main Style ##### */
 .banner-pro {
-  height: 60vh;
+  height: 80vh;
   background-image: url("imagens/mesa_escritorio_diagonal_1972_1024.png");
   background-color: var(--cor3);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  top: 0;
+  /* top: 0; */
   overflow: hidden;
 }
 
 .banner-pro-girl {
   height: 100%;
   width: 100%;
-  margin-left: 5%;
+  /* margin-left: 5%; */
   background-image: url("imagens/mulher_computador_1303_1303.png");
   background-repeat: no-repeat;
-  background-size: contain;
-  background-position: right 60% bottom 0%;
+  background-size: 40%;
+  background-position: right 52% bottom 0%;
 }
 
 .btn-cad {
@@ -206,7 +278,142 @@ hr {
   transition: 0.5s;
 }
 
+.tela-p {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-image: url("imagens/teiapontilhada_branca.png");
+  background-repeat: no-repeat;
+  background-size: 18%;
+  background-position: left -7% top 100%;
+}
+
+.tela-p2 {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-image: url("imagens/teiapontilhada_branca.png");
+  background-repeat: no-repeat;
+  background-size: 18%;
+  background-position: left 45% top 20%;
+}
+
+.banner-text {
+  width: 350px;
+  font-size: 22px;
+}
+
+.banner-search {
+  background-color: rgba(255, 255, 255, 0.700);
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.btn-search {
+  color: white;
+  background-color: var(--cor5);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  text-align: center;
+}
+
+.banner-input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--cor5);
+}
+
+.card-banner {
+  font-size: 25px;
+}
+
+.card-scroller {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 45%;
+  gap: var(--_spacer);
+  border-radius: 8px 0px 0px 8px;
+
+  overflow-x: auto;
+  /* overscroll-behavior-inline: contain; */
+  scroll-snap-type: inline mandatory;
+  /*Essa propriedade permite que os filhos sejam alinhados
+   pelo seletor abaixo*/
+  scroll-padding-inline: var(--_spacer);
+}
+
+.card-element {
+  margin: var(--_spacer);
+  scroll-snap-align: start;
+}
+.depo-container{
+  border-radius: 10px;
+  max-width: 350px;
+}
+.depo-img-container {
+  position: relative;
+  width: 50%;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 0px;
+}
+
+.depo-img-container::before {
+  content: '';
+  display: block;
+  padding-top: 100%;
+  /* Define uma proporção de 1:1 */
+}
+/* Centralizando a imagem dentro do container */
+.depo-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.depo-desc {
+  padding: 10px 10px 10px 10px;
+  color: white;
+  border-radius: 5px;
+  padding-bottom: 15px;
+}
+
 /* --------------->CSS da Equipe AQUI<-------------------- */
+
+.info-adicional {
+  background-color: var(--cor1);
+  min-height: 300px;
+  margin-bottom: -150px;
+  position: relative;
+  z-index: 10;
+  border-radius: 30px;
+  justify-self: center;
+}
+
+.info-adicional-content {
+  height: 100% !important;
+}
+
+.footer-along {
+  background-color: var(--cor5);
+  height: 25vh;
+  position: relative;
+  z-index: 9;
+}
+
+.icon-size-p {
+  font-size: 35px;
+}
+.icon-size {
+  font-size: 65px;
+}
 
 /* ##### Main Style ##### */
 
@@ -276,7 +483,31 @@ hr {
     background-size: contain;
     background-position: right;
   }
+
+  .tela-p {
+    background-image: none;
+  }
+
+  .tela-p2 {
+    background-image: none;
+  }
+
+  .banner-text {
+    background-color: rgba(255, 255, 255, 0.322);
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .banner-search {
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+
+  .card-scroller {
+    grid-auto-columns: 80%;
+  }
+
 }
+
 
 @media(max-width:600px) {
 
@@ -290,23 +521,52 @@ hr {
   }
 }
 
-@media(max-width:375px) {
+
+@media(max-width:425px) {
   .logotipo {
     width: 50px;
     margin-right: 5px;
   }
-
-  .span-logo {
-    margin-left: 0px;
-  }
-
   .logo {
-    font-size: 20px;
+    font-size: 25px;
   }
-}
+  .span-logo {
+    font-size: 12px;
+  }
 
-@media(max-width:350px) {
+
   .invisivel {
     display: none;
   }
+
+  .font-pro-carreira-normal {
+    font-size: 18px;
+  }
+
+  .btn-search {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media(max-width:767px) {
+  .position-absolute{
+    position:static !important;
+  }
+  .menu-transparente {
+    background-image: linear-gradient(to bottom, var(--cor5), #03363daf);
+    z-index: auto;
+  }
+
+  /* Este código sobrescreve as caracteristicas do navbar do projeto para a página index */
+  .menu-transparente .nav-link {
+    background-color: transparent;
+  }
+
+  .menu-transparente .active {
+    color: var(--cor2) !important;
+  }
+  /* .banner-pro {
+    position: static !important;
+  } */
 }
