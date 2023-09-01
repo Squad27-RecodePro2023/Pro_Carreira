@@ -1,2 +1,572 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+::-webkit-scrollbar {
+  width: .5em;
+  height: .5em;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cor3);
+}
+
+.card-scroller::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--cor5);
+  border-radius: 100vw;
+}
+
+.card-scroller::-webkit-scrollbar-thumb {
+  background: var(--cor5);
+  border-radius: 100vw;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --cor1: #c6e4e3;
+  --cor2: #58bebe;
+  --cor3: #31af7d;
+  --cor4: #439342;
+  --cor5: #03363d;
+  --_spacer: 1rem;
+
+  --font-primaria: 'Titillium Web', cursive, sans-serif;
+}
+
+.font-cor1 {
+  color: var(--cor1);
+}
+
+.font-cor2 {
+  color: var(--cor2);
+}
+
+.font-cor3 {
+  color: var(--cor3);
+}
+
+.font-cor4 {
+  color: var(--cor4);
+}
+
+.font-cor5 {
+  color: var(--cor5);
+}
+.bg-cor1{
+  background-color: var(--cor1);
+}
+.bg-cor2{
+  background-color: var(--cor2);
+}
+.bg-cor3{
+  background-color: var(--cor3);
+}
+.bg-cor4{
+  background-color: var(--cor4);
+}
+.bg-cor5{
+  background-color: var(--cor5);
+}
+.f-size-p{
+  font-size: 13px;
+}
+.f-size-m {
+  font-size: 15px;
+}
+.f-size-n {
+  font-size: 20px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.font-pro-carreira {
+  font-family: var(--font-primaria);
+  font-weight: bold;
+}
+
+.font-pro-carreira-normal {
+  font-family: var(--font-primaria);
+  font-weight: normal;
+}
+
+.ocupacao {
+  flex: 1;
+}
+
+/* ##### Header Style ##### */
+.logotipo {
+  width: 70px;
+  margin-right: 10px;
+}
+
+.logo {
+  font-family: var(--font-primaria);
+  font-weight: bolder;
+  font-size: 30px;
+  color: var(--cor1);
+}
+
+.logo:hover {
+  color: var(--cor1);
+}
+
+.span-logo {
+  font-family: var(--font-primaria);
+  font-weight: lighter;
+  font-size: 15px;
+  margin-left: 2px;
+  color: var(--cor1);
+}
+
+nav {
+  background-image: linear-gradient(to bottom, var(--cor5), #03363dbb);
+}
+
+.menu-transparente {
+  background-image: linear-gradient(to bottom, transparent, transparent);
+  z-index: 1;
+}
+
+/* Este código sobrescreve as caracteristicas do navbar do projeto para a página index */
+.menu-transparente .nav-link {
+  background-color: rgba(255, 255, 255, 0.452);
+  border-radius: 30px;
+  padding: 5px 20px !important;
+  margin: 2px;
+}
+
+.menu-transparente .active {
+  color: var(--cor5) !important;
+}
+
+.nav-link {
+  font-size: 18px;
+  color: white !important;
+  text-shadow: 1px 1px 1px #00000050;
+}
+
+.active {
+  color: var(--cor2) !important;
+  font-weight: bolder;
+}
+
+.navbar-toggler,
+.navbar-toggler-icon {
+  background-color: var(--cor1) !important;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler-icon:focus {
+  background-color: var(--cor1) !important;
+  color: var(--cor1) !important;
+}
+
+.btn-group {
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn-menu-entrar {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-primaria);
+  font-size: 15px;
+  font-weight: bolder;
+  background-color: transparent;
+  color: var(--cor1);
+  border: 2px solid var(--cor1);
+  border-radius: 30px;
+  padding: 5px 10px 5px 10px;
+  margin-right: 10px;
+  height: 35px;
+  cursor: pointer;
+}
+
+.btn-menu-entrar::before {
+  content: 'Entrar';
+}
+
+.btn-menu-entrar:hover {
+  border: 2px solid var(--cor2);
+  color: var(--cor2);
+  transition: 0.5s;
+}
+
+.btn-menu-cad {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-primaria);
+  font-size: 15px;
+  font-weight: bolder;
+  background-color: var(--cor1);
+  color: var(--cor5);
+  border: none;
+  border-radius: 30px;
+  padding: 5px 10px 5px 10px;
+  height: 35px;
+  cursor: pointer;
+}
+
+.btn-menu-cad:hover {
+  background-color: var(--cor2);
+  transition: 0.5s;
+}
+
+.navbar-expand-md {
+  padding-bottom: 15px;
+}
+
+hr {
+  color: var(--cor1);
+}
+
+/* ##### Header Style ##### */
+
+/* ##### Main Style ##### */
+.banner-pro {
+  height: 80vh;
+  background-image: url("imagens/mesa_escritorio_diagonal_1972_1024.png");
+  background-color: var(--cor3);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* top: 0; */
+  overflow: hidden;
+}
+
+.banner-pro-girl {
+  height: 100%;
+  width: 100%;
+  /* margin-left: 5%; */
+  background-image: url("imagens/mulher_computador_1303_1303.png");
+  background-repeat: no-repeat;
+  background-size: 40%;
+  background-position: right 52% bottom 0%;
+}
+
+.btn-cad {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-primaria);
+  font-size: 20px;
+  font-weight: bolder;
+  background-color: var(--cor5);
+  border: 1px solid var(--cor1);
+  color: white;
+  border-radius: 30px;
+  padding: 5px 20px 5px 20px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.btn-cad:hover {
+  background-color: var(--cor2);
+  color: var(--cor5);
+  transition: 0.5s;
+}
+
+.tela-p {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-image: url("imagens/teiapontilhada_branca.png");
+  background-repeat: no-repeat;
+  background-size: 18%;
+  background-position: left -7% top 100%;
+}
+
+.tela-p2 {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-image: url("imagens/teiapontilhada_branca.png");
+  background-repeat: no-repeat;
+  background-size: 18%;
+  background-position: left 45% top 20%;
+}
+
+.banner-text {
+  width: 350px;
+  font-size: 22px;
+}
+
+.banner-search {
+  background-color: rgba(255, 255, 255, 0.700);
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.btn-search {
+  color: white;
+  background-color: var(--cor5);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  text-align: center;
+}
+
+.banner-input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--cor5);
+}
+
+.card-banner {
+  font-size: 25px;
+}
+
+.card-scroller {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 45%;
+  gap: var(--_spacer);
+  border-radius: 8px 0px 0px 8px;
+
+  overflow-x: auto;
+  /* overscroll-behavior-inline: contain; */
+  scroll-snap-type: inline mandatory;
+  /*Essa propriedade permite que os filhos sejam alinhados
+   pelo seletor abaixo*/
+  scroll-padding-inline: var(--_spacer);
+}
+
+.card-element {
+  margin: var(--_spacer);
+  scroll-snap-align: start;
+}
+.depo-container{
+  border-radius: 10px;
+  max-width: 350px;
+}
+.depo-img-container {
+  position: relative;
+  width: 50%;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 0px;
+}
+
+.depo-img-container::before {
+  content: '';
+  display: block;
+  padding-top: 100%;
+  /* Define uma proporção de 1:1 */
+}
+/* Centralizando a imagem dentro do container */
+.depo-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.depo-desc {
+  padding: 10px 10px 10px 10px;
+  color: white;
+  border-radius: 5px;
+  padding-bottom: 15px;
+}
+
+/* --------------->CSS da Equipe AQUI<-------------------- */
+
+.info-adicional {
+  background-color: var(--cor1);
+  min-height: 300px;
+  margin-bottom: -150px;
+  position: relative;
+  z-index: 10;
+  border-radius: 30px;
+  justify-self: center;
+}
+
+.info-adicional-content {
+  height: 100% !important;
+}
+
+.footer-along {
+  background-color: var(--cor5);
+  height: 25vh;
+  position: relative;
+  z-index: 9;
+}
+
+.icon-size-p {
+  font-size: 35px;
+}
+.icon-size {
+  font-size: 65px;
+}
+
+/* ##### Main Style ##### */
+
+/* ##### Footer Style ##### */
+.bg-footer {
+  background-color: var(--cor5);
+}
+
+.rodape {
+  color: var(--cor1)
+}
+
+.gp-footer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.gp-footer>i {
+  margin-right: 15px;
+  margin-bottom: 5px;
+}
+
+.gp-footer>.marc {
+  margin-bottom: 5px;
+  font-weight: normal !important;
+}
+
+.gp-col-foot {
+  padding: 5px 0px 20px 35px;
+}
+
+.foot-title {
+  margin-bottom: 20px;
+}
+
+.pro-carreira {
+  font-family: var(--font-primaria);
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--cor5);
+}
+
+.fot-end {
+  background-color: var(--cor1);
+  color: var(--cor5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+/* ##### Footer Style ##### */
+
+
+/* ### Breakpoints de responsividade banner inicial ### */
+@media(max-width:900px) {
+  .banner-pro {
+    background-image: url("imagens/mesa_escritorio_recorte.jpg");
+  }
+
+  .banner-pro-girl {
+    height: 100%;
+    width: 100%;
+    /* margin-top: 20%; */
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+  }
+
+  .tela-p {
+    background-image: none;
+  }
+
+  .tela-p2 {
+    background-image: none;
+  }
+
+  .banner-text {
+    background-color: rgba(255, 255, 255, 0.322);
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .banner-search {
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+
+  .card-scroller {
+    grid-auto-columns: 80%;
+  }
+
+}
+
+
+@media(max-width:600px) {
+
+  .banner-pro-girl {
+    height: 100%;
+    width: 100%;
+    margin-top: auto;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center bottom;
+  }
+}
+
+
+@media(max-width:425px) {
+  .logotipo {
+    width: 50px;
+    margin-right: 5px;
+  }
+  .logo {
+    font-size: 25px;
+  }
+  .span-logo {
+    font-size: 12px;
+  }
+
+
+  .invisivel {
+    display: none;
+  }
+
+  .font-pro-carreira-normal {
+    font-size: 18px;
+  }
+
+  .btn-search {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media(max-width:767px) {
+  .position-absolute{
+    position:static !important;
+  }
+  .menu-transparente {
+    background-image: linear-gradient(to bottom, var(--cor5), #03363daf);
+    z-index: auto;
+  }
+
+  /* Este código sobrescreve as caracteristicas do navbar do projeto para a página index */
+  .menu-transparente .nav-link {
+    background-color: transparent;
+  }
+
+  .menu-transparente .active {
+    color: var(--cor2) !important;
+  }
+  /* .banner-pro {
+    position: static !important;
+  } */
+}
