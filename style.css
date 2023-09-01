@@ -2,22 +2,26 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: .5em;
   height: .5em;
 }
-::-webkit-scrollbar-track{
+
+::-webkit-scrollbar-track {
   background: var(--cor3);
 }
-.card-scroller::-webkit-scrollbar-track{
+
+.card-scroller::-webkit-scrollbar-track {
   background: transparent;
   border-radius: 100vw;
 }
-::-webkit-scrollbar-thumb{
+
+::-webkit-scrollbar-thumb {
   background: var(--cor5);
   border-radius: 100vw;
 }
-.card-scroller::-webkit-scrollbar-thumb{
+
+.card-scroller::-webkit-scrollbar-thumb {
   background: var(--cor5);
   border-radius: 100vw;
 }
@@ -36,6 +40,50 @@
   --_spacer: 1rem;
 
   --font-primaria: 'Titillium Web', cursive, sans-serif;
+}
+
+.font-cor1 {
+  color: var(--cor1);
+}
+
+.font-cor2 {
+  color: var(--cor2);
+}
+
+.font-cor3 {
+  color: var(--cor3);
+}
+
+.font-cor4 {
+  color: var(--cor4);
+}
+
+.font-cor5 {
+  color: var(--cor5);
+}
+.bg-cor1{
+  background-color: var(--cor1);
+}
+.bg-cor2{
+  background-color: var(--cor2);
+}
+.bg-cor3{
+  background-color: var(--cor3);
+}
+.bg-cor4{
+  background-color: var(--cor4);
+}
+.bg-cor5{
+  background-color: var(--cor5);
+}
+.f-size-p{
+  font-size: 13px;
+}
+.f-size-m {
+  font-size: 15px;
+}
+.f-size-n {
+  font-size: 20px;
 }
 
 body {
@@ -195,7 +243,7 @@ hr {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  top: 0;
+  /* top: 0; */
   overflow: hidden;
 }
 
@@ -279,14 +327,14 @@ hr {
   border-bottom: 1px solid var(--cor5);
 }
 
-.card-banner{
+.card-banner {
   font-size: 25px;
 }
 
 .card-scroller {
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: 40%;
+  grid-auto-columns: 45%;
   gap: var(--_spacer);
   border-radius: 8px 0px 0px 8px;
 
@@ -302,8 +350,70 @@ hr {
   margin: var(--_spacer);
   scroll-snap-align: start;
 }
+.depo-container{
+  border-radius: 10px;
+  max-width: 350px;
+}
+.depo-img-container {
+  position: relative;
+  width: 50%;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 0px;
+}
+
+.depo-img-container::before {
+  content: '';
+  display: block;
+  padding-top: 100%;
+  /* Define uma proporção de 1:1 */
+}
+/* Centralizando a imagem dentro do container */
+.depo-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.depo-desc {
+  padding: 10px 10px 10px 10px;
+  color: white;
+  border-radius: 5px;
+  padding-bottom: 15px;
+}
 
 /* --------------->CSS da Equipe AQUI<-------------------- */
+
+.info-adicional {
+  background-color: var(--cor1);
+  min-height: 300px;
+  margin-bottom: -150px;
+  position: relative;
+  z-index: 10;
+  border-radius: 30px;
+  justify-self: center;
+}
+
+.info-adicional-content {
+  height: 100% !important;
+}
+
+.footer-along {
+  background-color: var(--cor5);
+  height: 25vh;
+  position: relative;
+  z-index: 9;
+}
+
+.icon-size-p {
+  font-size: 35px;
+}
+.icon-size {
+  font-size: 65px;
+}
 
 /* ##### Main Style ##### */
 
@@ -391,7 +501,8 @@ hr {
   .banner-search {
     background-color: rgba(255, 255, 255, 0.7);
   }
-  .card-scroller{
+
+  .card-scroller {
     grid-auto-columns: 80%;
   }
 
@@ -410,20 +521,6 @@ hr {
   }
 }
 
-/* @media(max-width:375px) {
-  .logotipo {
-    width: 50px;
-    margin-right: 5px;
-  }
-
-  .span-logo {
-    margin-left: 0px;
-  }
-
-  .logo {
-    font-size: 20px;
-  }
-} */
 
 @media(max-width:425px) {
   .logotipo {
@@ -443,4 +540,26 @@ hr {
     width: 30px;
     height: 30px;
   }
+}
+
+@media(max-width:767px) {
+  .position-absolute{
+    position:static !important;
+  }
+  .menu-transparente {
+    background-image: linear-gradient(to bottom, var(--cor5), #03363daf);
+    z-index: auto;
+  }
+
+  /* Este código sobrescreve as caracteristicas do navbar do projeto para a página index */
+  .menu-transparente .nav-link {
+    background-color: transparent;
+  }
+
+  .menu-transparente .active {
+    color: var(--cor2) !important;
+  }
+  /* .banner-pro {
+    position: static !important;
+  } */
 }
