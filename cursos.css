@@ -2,6 +2,20 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
 
+::-webkit-scrollbar {
+  width: .5em;
+  height: .5em;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cor3);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--cor5);
+  border-radius: 100vw;
+}
+
 
 * {
   margin: 0;
@@ -255,8 +269,6 @@ hr {
   font-size: 20px;
 }
 
-
-
 .area-interesse {
   display: flex;
   flex-wrap: wrap;
@@ -304,23 +316,6 @@ hr {
   font-weight: bolder;
   background-color: var(--cor3);
 }
-
-
-
-
-.icon-button {
-  margin-right: 5px;
-  font-size: 18px;
-}
-
-.icon-interesse {
-  display: flex;
-  font-size: 18px;
-  width: 22px;
-  height: 22px;
-  margin-right: 5px;
-}
-
 
 
 /*------------------TÍTULO CARD CURSOS -------------*/
@@ -374,13 +369,10 @@ hr {
 }
 
 
-
-
-
-
 /*---------CARDS CURSOS----------*/
 .card {
   margin: 15px;
+  cursor:pointer;
 }
 
 .card-body {
@@ -395,7 +387,7 @@ hr {
 }
 
 .card-conteudo {
-  padding-top: 23px;
+  padding-top: 30px;
 }
 
 .card-title {
@@ -408,9 +400,7 @@ hr {
 
 .card-text {
   font-family: var(--font-primaria);
-  margin-bottom: 10px;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  margin-bottom: 15px;
 }
 
 .card-description {
@@ -427,7 +417,7 @@ hr {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .card-detalhes-nivel-conteudo {
@@ -457,11 +447,6 @@ hr {
   font-size: 30px;
 }
 
-
-
-.final {
-  height: 40px;
-}
 
 
 
@@ -522,3 +507,16 @@ hr {
 }
 
 /* ##### Footer Style ##### */
+
+@media(max-width:425px) {
+  .logotipo {
+    width: 50px;
+    margin-right: 5px;
+  }
+  .logo {
+    font-size: 25px;
+  }
+  .span-logo {
+    font-size: 12px;
+  }
+}
